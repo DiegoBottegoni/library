@@ -12,7 +12,7 @@ function addValues(a, b) {
     case 'bigint':
       return a + b;
     case 'boolean':
-      return Number(a) + Number(b);
+      return a || b;
     case 'object':
       if (Array.isArray(a) && Array.isArray(b)) {
         return a.concat(b);

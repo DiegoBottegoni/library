@@ -1,11 +1,15 @@
+const {convertToNumber} = require('./convertToNumber')
+const {stringifyValue} = require('./stringifyValue')
+
+
 function coerceToType(value, type) {
     let coercedValue;
     switch (type) {
       case 'string':
-        coercedValue = String(value);
+        coercedValue = stringifyValue(value);
         break;
       case 'number':
-        coercedValue = Number(value);
+        coercedValue = convertToNumber(value);
         break;
       case 'boolean':
         coercedValue = Boolean(value);
